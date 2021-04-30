@@ -1,9 +1,131 @@
+:root{
+    --fondo-claro: url('https://i.ibb.co/Ybjb1LY/fondo-naranja-patrones-fisuras-67556-143.png');
+    --fondo-oscuro: url('https://i.ibb.co/rFjqCG4/patrones-fisuras-limones-hojas-105718-3889.png');
+}
+
 *{
     padding: 0px;
     margin: 0px;
 }
+body{
+    
+    background-image: var(--fondo-claro);  
+    transition: .3s all ease;
+}
 
+body.dark {
+    background-image: var(--fondo-oscuro);
+    transition: .3s all ease;
+  
+}
+
+.container-switch-header {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 10px;
+}
+tengo que comer espere 
+
+/* Cambio de modo DIA/NOCHE */
+.switch{
+    background: var(--light-switch);
+    border-radius: 1000px;
+    border: none;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    outline: none;
+    font-size: 1.3rem;
+    margin-top: 5px;
+}
+
+.switch::after{
+    content: "";
+    display: block;
+    width: 36px;
+    height: 36px;
+    position: absolute;
+    background: #f1f1f1;
+    top: -3px;
+    left: -4px;
+    right: unset;
+    border-radius: 1000px;
+    transition: 0.3s ease all;
+    box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, .2);
+}
+
+.switch:active{
+    background: var(--dark-switch);
+    color: black;
+}
+
+.switch:active::after{
+    right: -4px;
+    left: unset;
+}
+
+.active{
+    background: var(--dark-switch);
+    color: black;
+}
+
+.active::after{
+    right: -4px;
+    left: unset;
+    transition: 0.3s ease all;
+}
+
+.switch span{
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    display: block;
+    background: none;
+    color: white;
+}
 /*NAVEGADOR*/
-.lista{
+
+#nav{
+    width: 100%;
+    height: 50px;
+    background: rosybrown;
+}
+
+#lista{
+    float: right;
+    margin: 10px;
+   
+}
+
+#lista li{
+    display:inline-block;
+    margin-right: 15px;
+    position: relative;
+    background: rosybrown;
+    padding:7px;
+    border-radius: 30%;
+    color: rosybrown; 
+
+}
+ 
+#lista li:hover{
+    background: blanchedalmond;
+}
+
+a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+#blanco{
+    margin: 300px auto;
+    background: white;
+    height: 100px;
+    width: 0px;
+
+}
+
+#blanco br {
     display: inline-block;
 }
